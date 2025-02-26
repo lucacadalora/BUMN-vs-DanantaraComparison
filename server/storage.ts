@@ -6,11 +6,11 @@ import {
   type LegalContribution, 
   type InsertLegalContribution 
 } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 import nodemailer from 'nodemailer';
 
-// modify the interface with any CRUD methods
-// you might need
-
+// Define the storage interface
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
@@ -23,19 +23,11 @@ export interface IStorage {
   approveLegalContribution(id: number): Promise<boolean>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private legalContributions: Map<number, LegalContribution>;
-  userCurrentId: number;
-  contributionCurrentId: number;
+// Database implementation
+export class DatabaseStorage implements IStorage {
   emailTransporter: any;
 
   constructor() {
-    this.users = new Map();
-    this.legalContributions = new Map();
-    this.userCurrentId = 1;
-    this.contributionCurrentId = 1;
-    
     // Setup email transporter
     this.emailTransporter = nodemailer.createTransport({
       service: 'gmail',
@@ -47,38 +39,33 @@ export class MemStorage implements IStorage {
   }
 
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.userCurrentId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db.insert(users).values(insertUser).returning();
     return user;
   }
   
   async createLegalContribution(insertContribution: InsertLegalContribution): Promise<LegalContribution> {
-    const id = this.contributionCurrentId++;
-    const now = new Date();
-    
     // Ensure section and sectionId are not undefined
-    const contribution: LegalContribution = { 
-      ...insertContribution, 
-      id,
-      timestamp: now,
-      reviewed: false,
-      approved: false,
+    const dataToInsert = {
+      ...insertContribution,
       section: insertContribution.section || null,
       sectionId: insertContribution.sectionId || null
     };
     
-    this.legalContributions.set(id, contribution);
+    // Insert into database
+    const [contribution] = await db
+      .insert(legalContributions)
+      .values(dataToInsert)
+      .returning();
     
     // Send email notification
     await this.sendContributionEmail(contribution);
@@ -87,21 +74,26 @@ export class MemStorage implements IStorage {
   }
   
   async getLegalContributions(): Promise<LegalContribution[]> {
-    return Array.from(this.legalContributions.values());
+    return db.select().from(legalContributions);
   }
   
   async getLegalContributionById(id: number): Promise<LegalContribution | undefined> {
-    return this.legalContributions.get(id);
+    const [contribution] = await db
+      .select()
+      .from(legalContributions)
+      .where(eq(legalContributions.id, id));
+    
+    return contribution || undefined;
   }
   
   async approveLegalContribution(id: number): Promise<boolean> {
-    const contribution = this.legalContributions.get(id);
-    if (!contribution) return false;
+    const result = await db
+      .update(legalContributions)
+      .set({ reviewed: true, approved: true })
+      .where(eq(legalContributions.id, id))
+      .returning();
     
-    contribution.reviewed = true;
-    contribution.approved = true;
-    this.legalContributions.set(id, contribution);
-    return true;
+    return result.length > 0;
   }
   
   private async sendContributionEmail(contribution: LegalContribution) {
@@ -155,4 +147,4 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

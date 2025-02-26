@@ -381,7 +381,7 @@ export const comparisonData = [
   },
   {
     id: "poin-krusial",
-    title: "10. Poin Krusial dan Implikasi Strategis",
+    title: "10. Poin Krusial dan Implikasi Strategis bagi BUMN",
     icon: Scale,
     categories: [
       {
@@ -433,6 +433,126 @@ export const comparisonData = [
           points: [
             "Pasal 9F: Perlindungan hukum terhadap keputusan bisnis yang diambil dengan itikad baik",
             "Implikasi: Meningkatkan keberanian dalam pengambilan keputusan bisnis, mendorong inovasi dan pengambilan risiko yang terukur"
+          ]
+        }
+      },
+      {
+        title: "Perubahan Sistem Audit",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "BPK memiliki kewenangan luas dalam melakukan audit BUMN",
+            "Tidak ada batasan spesifik untuk pemeriksaan BPK"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 71 dan 71A: Pemeriksaan oleh BPK dibatasi hanya untuk 'pemeriksaan dengan tujuan tertentu' atas permintaan DPR",
+            "Implikasi: Mengurangi intensitas pengawasan, meningkatkan efisiensi, potensi mengurangi akuntabilitas publik"
+          ]
+        }
+      },
+      {
+        title: "Pembentukan Danantara",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Tidak ada badan pengelola investasi khusus untuk BUMN",
+            "Pengelolaan BUMN dilakukan langsung oleh Kementerian BUMN"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 3E-3AA: Pembentukan Badan Pengelola Investasi Daya Anagata Nusantara dengan modal minimal Rp 1.000 triliun",
+            "Implikasi: Perubahan tata kelola BUMN secara fundamental, centralisasi pengelolaan aset dan investasi BUMN"
+          ]
+        }
+      },
+      {
+        title: "Struktur Holding",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Tidak ada ketentuan spesifik tentang struktur holding BUMN",
+            "Pengelolaan dilakukan per-BUMN secara individual"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 3AB-3AN: Pembentukan Holding Investasi dan Holding Operasional",
+            "Implikasi: Restrukturisasi BUMN, efisiensi pengelolaan, potensi konsolidasi antar-BUMN sejenis"
+          ]
+        }
+      },
+      {
+        title: "Fleksibilitas Pengelolaan Aset",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Pengelolaan aset terbatas dan kaku",
+            "Tidak ada ketentuan spesifik tentang hapus buku dan hapus tagih"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 62A-62H: Aset BUMN dapat dipindahtangankan, dijaminkan, dikerjasamakan",
+            "BUMN dapat melakukan hapus buku dan hapus tagih",
+            "Implikasi: Optimalisasi aset BUMN, penyelesaian aset bermasalah, efisiensi pengelolaan aset"
+          ]
+        }
+      },
+      {
+        title: "Hak Monopoli",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Tidak ada ketentuan spesifik tentang hak monopoli",
+            "BUMN harus mematuhi UU Persaingan Usaha"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 86M: Presiden dapat memberikan hak monopoli kepada BUMN atau Anak Usaha BUMN",
+            "Implikasi: Potensi keuntungan kompetitif bagi BUMN tertentu, potensi distorsi pasar"
+          ]
+        }
+      },
+      {
+        title: "Penugasan Khusus dengan Pendanaan",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Penugasan khusus sering tanpa dukungan pendanaan yang jelas",
+            "BUMN menanggung beban keuangan untuk penugasan publik"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 87C: Penugasan khusus dengan dukungan pendanaan dari pemerintah",
+            "Implikasi: Kejelasan pemisahan misi komersial dan misi layanan publik, pengurangan beban keuangan BUMN untuk penugasan khusus"
+          ]
+        }
+      },
+      {
+        title: "Penyelesaian Sengketa Khusus",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Tidak ada ketentuan khusus untuk penyelesaian sengketa antar-BUMN",
+            "Sengketa diselesaikan melalui jalur normal (pengadilan)"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 87F: Mekanisme penyelesaian sengketa antar-BUMN melalui musyawarah dan mediasi",
+            "Implikasi: Efisiensi penyelesaian sengketa, menghindari proses pengadilan yang berlarut-larut"
           ]
         }
       }
