@@ -10,11 +10,10 @@ const Home: React.FC = () => {
       <Header />
       
       <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="mb-6">
-          <h2 className="text-2xl font-bold text-center text-[#2C3E50]">Analisis Perbandingan UU BUMN</h2>
-          <p className="text-center text-[#34495E] mt-2 max-w-2xl mx-auto">
-            Studi komprehensif terhadap perubahan regulasi dalam UU No. 19/2003 dan UU No. 1/2025 
-            tentang Badan Usaha Milik Negara (BUMN)
+        <div className="mb-8">
+          <p className="text-center text-[#34495E] mt-2 max-w-3xl mx-auto text-lg">
+            Studi komprehensif yang menganalisis perubahan regulasi dan implikasi yuridis 
+            untuk memahami transformasi pengelolaan BUMN di Indonesia
           </p>
         </div>
 

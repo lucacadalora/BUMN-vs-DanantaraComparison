@@ -1,4 +1,5 @@
 import React from 'react';
+import { Check, History } from 'lucide-react';
 
 interface ComparisonCardProps {
   title: string;
@@ -8,7 +9,21 @@ interface ComparisonCardProps {
 
 const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, points, type }) => {
   const isOld = type === 'old';
-  const headerClass = isOld ? 'bg-[#003366]' : 'bg-[#557153]';
+  
+  // Styling based on whether it's old or new UU
+  const cardStyle = isOld 
+    ? 'border-blue-100 bg-blue-50'
+    : 'border-green-100 bg-green-50';
+    
+  const headerStyle = isOld 
+    ? 'bg-gradient-to-r from-[#002E5B] to-[#003366] text-white'
+    : 'bg-gradient-to-r from-[#1B5E20] to-[#2E7D32] text-white';
+    
+  const bulletStyle = isOld 
+    ? 'bg-blue-100 text-[#003366]'
+    : 'bg-green-100 text-[#1B5E20]';
+    
+  const iconComponent = isOld ? History : Check;
 
   // Function to check if a point starts with a letter followed by a period (a., b., etc.)
   const isSubPoint = (point: string) => {
@@ -16,12 +31,13 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, points, type }) 
   };
 
   return (
-    <div className="bg-white rounded-lg border border-[#E5E5E5] overflow-hidden">
-      <div className={`${headerClass} text-white py-2 px-4`}>
+    <div className={`rounded-lg border ${cardStyle} shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md`}>
+      <div className={`${headerStyle} py-3 px-4 flex items-center`}>
+        {React.createElement(iconComponent, { className: 'w-4 h-4 mr-2' })}
         <h5 className="font-medium">{title}</h5>
       </div>
-      <div className="p-4">
-        <ul className="list-disc pl-5 space-y-2">
+      <div className="p-5">
+        <ul className="space-y-3">
           {points.map((point, index) => {
             // Check if this is a sub-point (starts with a., b., etc.)
             if (isSubPoint(point)) {
@@ -38,17 +54,23 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, points, type }) 
             }
 
             return (
-              <li key={index} className="leading-relaxed">
-                {point}
-                {subPoints.length > 0 && (
-                  <ul className="list-none pl-5 mt-2 space-y-1">
-                    {subPoints.map((subPoint, subIndex) => (
-                      <li key={`${index}-${subIndex}`} className="leading-relaxed">
-                        {subPoint}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+              <li key={index} className="flex items-start">
+                <span className={`${bulletStyle} flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs mr-3 mt-1`}>
+                  {index + 1}
+                </span>
+                <div className="flex-grow">
+                  <p className="leading-relaxed text-gray-700">{point}</p>
+                  {subPoints.length > 0 && (
+                    <ul className="pl-5 mt-2 space-y-2">
+                      {subPoints.map((subPoint, subIndex) => (
+                        <li key={`${index}-${subIndex}`} className="flex items-start">
+                          <span className={`inline-block w-2 h-2 rounded-full ${isOld ? 'bg-blue-300' : 'bg-green-300'} mr-2 mt-2`}></span>
+                          <p className="leading-relaxed text-gray-600 text-sm">{subPoint.replace(/^[a-z]\.\s/i, '')}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </li>
             );
           })}
