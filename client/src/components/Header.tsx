@@ -14,16 +14,40 @@ const Header: React.FC = () => {
   const [section, setSection] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent, type: string = 'suggestion') => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log({ email, name, suggestion, section });
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setSuggestion('');
-      setSection('');
-    }, 3000);
+    try {
+      const response = await fetch('/api/legal-contributions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          name,
+          suggestion,
+          section,
+          type, // 'suggestion' or 'review'
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setSuggestion('');
+          setSection('');
+        }, 3000);
+      } else {
+        console.error('Error submitting contribution:', data.message);
+        alert('Failed to submit: ' + data.message);
+      }
+    } catch (error) {
+      console.error('Error submitting contribution:', error);
+      alert('Network error, please try again.');
+    }
   };
 
   return (
@@ -59,7 +83,7 @@ const Header: React.FC = () => {
                         <p>Terima kasih! Usulan Anda telah dikirim untuk ditinjau.</p>
                       </div>
                     ) : (
-                      <form onSubmit={handleSubmit} className="space-y-4">
+                      <form onSubmit={(e) => handleSubmit(e, 'suggestion')} className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
                             <label htmlFor="name" className="text-sm font-medium">
@@ -136,7 +160,7 @@ const Header: React.FC = () => {
                         <p>Terima kasih! Review Anda telah dikirim.</p>
                       </div>
                     ) : (
-                      <form onSubmit={handleSubmit} className="space-y-4">
+                      <form onSubmit={(e) => handleSubmit(e, 'review')} className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
                             <label htmlFor="reviewName" className="text-sm font-medium">
