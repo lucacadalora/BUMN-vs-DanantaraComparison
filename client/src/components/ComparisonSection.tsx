@@ -18,7 +18,7 @@ interface Category {
 interface ComparisonSectionProps {
   id: string;
   title: string;
-  icon: React.ReactNode;
+  icon: React.ComponentType;
   categories: Category[];
   isActive: boolean;
 }
@@ -45,7 +45,9 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
         className="flex items-center p-4 cursor-pointer bg-[#003366] bg-opacity-5 hover:bg-opacity-10 transition-all"
         onClick={toggle}
       >
-        <span className="text-[#003366] mr-3">{icon}</span>
+        <span className="text-[#003366] mr-3">
+          {React.createElement(icon)}
+        </span>
         <h3 className="text-xl font-semibold flex-grow">{title}</h3>
         <ChevronDown 
           className={`transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 

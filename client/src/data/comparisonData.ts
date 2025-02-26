@@ -3,7 +3,8 @@ import {
   Business, 
   MonetizationOn, 
   Gavel, 
-  Assignment 
+  Assignment,
+  Scale
 } from '@/lib/icons';
 
 export const comparisonData = [
@@ -238,6 +239,196 @@ export const comparisonData = [
             "Pasal 87C mengatur tentang penugasan khusus oleh Pemerintah Pusat kepada BUMN atau Anak Usaha BUMN",
             "Pasal 87C ayat (4) menyatakan penugasan khusus dapat berupa kompensasi, pembayaran, atau insentif lainnya",
             "Pasal 87C ayat (5) mengatur bahwa kompensasi diberikan dengan persetujuan Menteri Keuangan untuk kompensasi dari APBN dan persetujuan RUPS untuk kompensasi dari BUMN"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "manajemen",
+    title: "6. Peningkatan Kualitas Tata Kelola dan Manajemen",
+    icon: Business,
+    categories: [
+      {
+        title: "Syarat dan Seleksi Direksi, Komisaris dan Pengawas",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Persyaratan umum diatur di Pasal 16 dan 28 tanpa detail spesifik",
+            "Tidak ada pengaturan khusus mengenai fit and proper test"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 15A, 27A, 43C, dan 56A mengatur persyaratan lebih ketat dan spesifik",
+            "Pasal 15B, 27B, 43D, dan 56B mengatur proses seleksi yang melibatkan lembaga profesional",
+            "Pasal 15C, 27C, 43E, dan 56C mewajibkan kontrak manajemen dan pakta integritas"
+          ]
+        }
+      },
+      {
+        title: "Pengembangan SDM dan Budaya Korporasi",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Tidak mengatur secara khusus tentang pengembangan SDM dan budaya korporasi"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 87 ayat (1) menekankan pengembangan 'sumber daya manusia yang profesional dan berdaya saing global'",
+            "Pasal 87 ayat (2) mewajibkan BUMN membangun budaya perusahaan yang mencerminkan nilai-nilai 'integritas, profesionalisme, produktivitas, dan kualitas'"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "monopoli",
+    title: "7. Pengaturan Hak Monopoli dan Hak Khusus",
+    icon: Gavel,
+    categories: [
+      {
+        title: "Hak Monopoli dan Pengecualian Persaingan Usaha",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Pasal 51 menyatakan BUMN dapat diberikan tugas khusus",
+            "Tidak mengatur secara eksplisit tentang hak monopoli dan pengecualian dari aturan persaingan usaha"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 86M ayat (1) secara eksplisit memberikan wewenang kepada Presiden untuk memberikan hak monopoli kepada BUMN atau anak usaha BUMN",
+            "Pasal 86M ayat (2) menyatakan bahwa monopoli tersebut dikecualikan dari ketentuan larangan praktik monopoli",
+            "Pasal 86N ayat (1) mengatur hak istimewa lain seperti kemudahan perizinan, insentif fiskal, dan kemudahan untuk mendapatkan proyek Pemerintah"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "inovasi",
+    title: "8. Dukungan Inovasi dan Pengembangan Teknologi",
+    icon: Assignment,
+    categories: [
+      {
+        title: "Inovasi dan Pengembangan Teknologi",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Tidak mengatur secara khusus tentang inovasi dan pengembangan teknologi"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 2 ayat (1) huruf g secara eksplisit menyebut tujuan BUMN termasuk 'membangun industri strategis yang berbasis riset, inovasi, dan teknologi yang bersinergi dengan negara lain'",
+            "Pasal 87C ayat (1) mengatur penugasan khusus untuk 'penelitian dan pengembangan, serta inovasi nasional'",
+            "Pasal 86P ayat (1) mengatur pemberian hak eksklusif atas kekayaan intelektual yang dikembangkan BUMN"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "tantangan",
+    title: "9. Tantangan Implementasi dan Potensi Isu Hukum",
+    icon: Scale,
+    categories: [
+      {
+        title: "Harmonisasi Regulasi",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Terdapat konflik norma dengan berbagai UU lain seperti UU Keuangan Negara dan UU Perbendaharaan Negara"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 94B menyatakan 'Peraturan pelaksanaan dari Undang-Undang ini harus ditetapkan paling lama 6 (enam) bulan terhitung sejak Undang-Undang ini diundangkan'",
+            "Potensi konflik norma dengan UU No. 17/2003 tentang Keuangan Negara terkait definisi kekayaan negara",
+            "Potensi konflik norma dengan UU No. 31/1999 jo. UU No. 20/2001 tentang Pemberantasan Tindak Pidana Korupsi terkait definisi kerugian negara"
+          ]
+        }
+      },
+      {
+        title: "Tantangan Tata Kelola dan Akuntabilitas",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Terlalu ketat dalam pengawasan hingga menghambat pengambilan keputusan bisnis"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Keseimbangan antara tujuan komersial dengan kepentingan publik",
+            "Pasal 3Y menetapkan bahwa Menteri, organ, dan pegawai Badan tidak dapat dimintai pertanggungjawaban hukum dengan syarat-syarat tertentu",
+            "Tantangan untuk memastikan independensi pengambilan keputusan dalam struktur yang kompleks"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "poin-krusial",
+    title: "10. Poin Krusial dan Implikasi Strategis",
+    icon: Scale,
+    categories: [
+      {
+        title: "Perubahan Status Modal BUMN",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Modal BUMN dianggap sebagai bagian dari kekayaan negara",
+            "Keuntungan/kerugian BUMN dianggap sebagai keuntungan/kerugian negara"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 4 ayat (2) dan (5): Modal BUMN bukan lagi bagian dari kekayaan negara tetapi milik BUMN sebagai badan hukum",
+            "Pasal 4B: Keuntungan/kerugian BUMN bukan merupakan keuntungan/kerugian negara",
+            "Implikasi: Mengurangi risiko tuntutan kerugian negara, meningkatkan fleksibilitas pengambilan keputusan keuangan"
+          ]
+        }
+      },
+      {
+        title: "Status Non-Penyelenggara Negara",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Direksi dan komisaris BUMN dianggap sebagai penyelenggara negara",
+            "Berisiko terkena tuntutan tindak pidana korupsi"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 9G: Anggota Direksi, Dewan Komisaris, dan Dewan Pengawas BUMN bukan penyelenggara negara",
+            "Implikasi: Mengurangi risiko kriminalisasi, mengurangi pertanggungjawaban publik, mendorong profesionalisme bisnis"
+          ]
+        }
+      },
+      {
+        title: "Business Judgment Rule",
+        old: {
+          title: "UU Lama (UU No. 19/2003)",
+          points: [
+            "Tidak ada perlindungan eksplisit untuk keputusan bisnis",
+            "Direksi berisiko dituntut secara pidana untuk kerugian bisnis"
+          ]
+        },
+        new: {
+          title: "UU Baru (UU No. 1/2025)",
+          points: [
+            "Pasal 9F: Perlindungan hukum terhadap keputusan bisnis yang diambil dengan itikad baik",
+            "Implikasi: Meningkatkan keberanian dalam pengambilan keputusan bisnis, mendorong inovasi dan pengambilan risiko yang terukur"
           ]
         }
       }
