@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import CategoryComparison from './CategoryComparison';
+import SectionComment from './SectionComment';
 
 interface Category {
   title: string;
@@ -44,15 +45,24 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
             ? 'bg-gradient-to-r from-[#00264D] to-[#003366] text-white' 
             : 'bg-gradient-to-r from-[#F8FAFC] to-[#EFF6FF] text-[#00264D] hover:bg-[#F0F7FF]'
         } transition-all duration-300`}
-        onClick={toggle}
       >
         <span className={`mr-4 ${isOpen ? 'text-white' : 'text-[#003366]'}`}>
           {React.createElement(icon)}
         </span>
-        <h3 className="text-xl font-semibold flex-grow">{title}</h3>
-        <div className={`flex items-center justify-center w-8 h-8 rounded-full ${
-          isOpen ? 'bg-white bg-opacity-20' : 'bg-[#003366] bg-opacity-10'
-        }`}>
+        <h3 className="text-xl font-semibold flex-grow" onClick={toggle}>{title}</h3>
+        
+        {/* Comment button - doesn't toggle the section when clicked */}
+        <div className="mr-3" onClick={(e) => e.stopPropagation()}>
+          <SectionComment sectionId={id} sectionTitle={title} />
+        </div>
+        
+        {/* Toggle button */}
+        <div 
+          className={`flex items-center justify-center w-8 h-8 rounded-full ${
+            isOpen ? 'bg-white bg-opacity-20' : 'bg-[#003366] bg-opacity-10'
+          }`}
+          onClick={toggle}
+        >
           <ChevronDown 
             className={`w-5 h-5 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
           />
