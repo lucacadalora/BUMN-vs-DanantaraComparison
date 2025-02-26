@@ -19,38 +19,32 @@ const Header: React.FC = () => {
           </a>
         </div>
         
-        {/* Main header content with more compact layout */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
+        {/* Main header content with unified title */}
+        <div className="flex justify-between items-center">
+          <div className="flex-1 flex items-center justify-center">
             <div className="bg-white bg-opacity-10 p-2 rounded-full mr-3">
               <Gavel />
             </div>
-            <h1 className="text-xl md:text-2xl font-bold tracking-tight">
-              Analisis Perbandingan UU BUMN
-            </h1>
-          </div>
-          
-          <div className="hidden md:flex items-center bg-white bg-opacity-10 px-4 py-2 rounded-md">
-            <div className="text-right mr-2">
-              <div className="text-blue-200 font-medium text-sm">UU No. 19/2003</div>
-              <div className="text-xs text-blue-100">Undang-Undang Lama</div>
-            </div>
             
-            <div className="mx-2 font-bold">VS</div>
-            
-            <div className="text-left ml-2">
-              <div className="text-blue-200 font-medium text-sm">UU No. 1/2025</div>
-              <div className="text-xs text-blue-100">Undang-Undang Baru</div>
+            <div>
+              <h1 className="text-lg md:text-xl font-bold tracking-tight">
+                Analisis Perbandingan UU BUMN
+              </h1>
+              
+              <div className="flex items-center mt-1 text-sm">
+                <div>
+                  <span className="text-blue-200 mr-1">UU No. 19/2003</span>
+                  <span className="text-xs text-blue-100">(Lama)</span>
+                </div>
+                
+                <span className="mx-2 font-bold text-xs">VS</span>
+                
+                <div>
+                  <span className="text-blue-200 mr-1">UU No. 1/2025</span>
+                  <span className="text-xs text-blue-100">(Baru)</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        
-        {/* Mobile version of comparison - only visible on small screens */}
-        <div className="md:hidden flex justify-center mt-2">
-          <div className="flex items-center bg-white bg-opacity-10 px-3 py-1 rounded-md text-sm">
-            <span>UU No. 19/2003</span>
-            <span className="mx-2 font-bold">VS</span>
-            <span>UU No. 1/2025</span>
           </div>
         </div>
       </div>
