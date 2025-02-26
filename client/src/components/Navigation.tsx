@@ -7,11 +7,16 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ activeSection, onSectionChange }) => {
   const navItems = [
-    { id: "paradigma", label: "Paradigma Hukum" },
-    { id: "kelembagaan", label: "Kelembagaan" },
-    { id: "keuangan", label: "Keuangan & Aset" },
-    { id: "pengawasan", label: "Pengawasan" },
-    { id: "penugasan", label: "Penugasan Khusus" },
+    { id: "paradigma", label: "1. Paradigma Hukum" },
+    { id: "kelembagaan", label: "2. Kelembagaan" },
+    { id: "keuangan", label: "3. Keuangan & Aset" },
+    { id: "pengawasan", label: "4. Pengawasan" },
+    { id: "penugasan", label: "5. Penugasan Khusus" },
+    { id: "manajemen", label: "6. Tata Kelola" },
+    { id: "monopoli", label: "7. Hak Monopoli" },
+    { id: "inovasi", label: "8. Inovasi" },
+    { id: "tantangan", label: "9. Tantangan" },
+    { id: "poin-krusial", label: "10. Poin Krusial" },
   ];
 
   return (

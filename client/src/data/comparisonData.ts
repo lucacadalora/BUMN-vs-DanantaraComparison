@@ -47,7 +47,11 @@ export const comparisonData = [
           title: "UU Baru (UU No. 1/2025)",
           points: [
             "Paradigma ex-ante (memprediksi dampak dari keputusan sebelum diambil)",
-            "Pasal 9F ayat (1) dan (2) mengatur secara eksplisit tentang business judgment rule, menyatakan bahwa anggota Direksi/Dewan Komisaris/Dewan Pengawas tidak dapat dimintai pertanggungjawaban hukum atas kerugian jika dapat membuktikan: a. Kerugian tersebut bukan karena kesalahan atau kelalaiannya b. Telah melakukan pengurusan dengan iktikad baik dan kehati-hatian untuk kepentingan BUMN c. Tidak mempunyai benturan kepentingan d. Telah mengambil tindakan untuk mencegah timbul atau berlanjutnya kerugian",
+            "Pasal 9F ayat (1) dan (2) mengatur secara eksplisit tentang business judgment rule, yang memberikan perlindungan hukum pada Direksi/Komisaris/Pengawas jika dapat membuktikan:",
+            "a. Kerugian tersebut bukan karena kesalahan atau kelalaiannya",
+            "b. Telah melakukan pengurusan dengan iktikad baik dan kehati-hatian untuk kepentingan BUMN",
+            "c. Tidak mempunyai benturan kepentingan", 
+            "d. Telah mengambil tindakan untuk mencegah timbul atau berlanjutnya kerugian",
             "Pasal 9G secara eksplisit menyatakan \"Anggota Direksi, Dewan Komisaris, dan Dewan Pengawas BUMN bukan merupakan penyelenggara negara\""
           ]
         }
