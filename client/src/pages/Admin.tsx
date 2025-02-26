@@ -42,16 +42,16 @@ const Admin: React.FC = () => {
     }
   });
 
-  if (isLoading) return <div>Loading...</div>;
-
   const getTypeLabel = (type: string) => {
     const labels: Record<string, string> = {
       'suggestion': 'Usulan Perubahan',
-      'review': 'Review Analisis',
+      'review': 'Review Analisis', 
       'comment': 'Komentar Cepat'
     };
     return labels[type] || type;
   };
+
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <div className="container mx-auto p-4">
@@ -90,7 +90,7 @@ const Admin: React.FC = () => {
                   onClick={() => approveMutation.mutate(contribution.id)}
                   disabled={approveMutation.isPending}
                 >
-                  {approveMutation.isPending ? "Memproses..." : "Setujui"}
+                  {approveMutation.isPending ? "Menyetujui..." : "Setujui"}
                 </Button>
               </div>
             )}
