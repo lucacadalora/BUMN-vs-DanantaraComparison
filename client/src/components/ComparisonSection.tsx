@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import CategoryComparison from './CategoryComparison';
-import { useSectionToggle } from '@/hooks/useSectionToggle';
 
 interface Category {
   title: string;
@@ -20,18 +19,19 @@ interface ComparisonSectionProps {
   title: string;
   icon: React.ComponentType;
   categories: Category[];
-  isActive: boolean;
 }
 
 const ComparisonSection: React.FC<ComparisonSectionProps> = ({ 
   id, 
   title, 
   icon, 
-  categories,
-  isActive
+  categories
 }) => {
-  // Initialize with false so sections are closed by default
-  const { isOpen, toggle } = useSectionToggle(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(prev => !prev);
+  };
 
   return (
     <section id={id} className="bg-white rounded-lg shadow-md overflow-hidden">

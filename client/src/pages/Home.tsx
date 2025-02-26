@@ -1,27 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '@/components/Header';
-import Navigation from '@/components/Navigation';
 import ComparisonSection from '@/components/ComparisonSection';
 import Footer from '@/components/Footer';
 import { comparisonData } from '@/data/comparisonData';
 
 const Home: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>("paradigma");
-
-  const handleSectionChange = (sectionId: string) => {
-    setActiveSection(sectionId);
-    
-    // Scroll to section
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <Navigation activeSection={activeSection} onSectionChange={handleSectionChange} />
       
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="mb-6">
@@ -40,7 +26,6 @@ const Home: React.FC = () => {
               title={section.title}
               icon={section.icon}
               categories={section.categories}
-              isActive={activeSection === section.id}
             />
           ))}
         </div>
