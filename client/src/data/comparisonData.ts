@@ -6,8 +6,16 @@ import {
   Assignment,
   Scale
 } from '@/lib/icons';
+import { CategoryData } from '@/components/CategoryComparison';
 
-export const comparisonData = [
+interface ComparisonSection {
+  id: string;
+  title: string;
+  icon: React.ComponentType;
+  categories: CategoryData[];
+}
+
+export const comparisonData: ComparisonSection[] = [
   {
     id: "paradigma",
     title: "1. Perubahan Mendasar pada Paradigma Hukum",
@@ -54,6 +62,10 @@ export const comparisonData = [
             "d. Telah mengambil tindakan untuk mencegah timbul atau berlanjutnya kerugian",
             "Pasal 9G secara eksplisit menyatakan \"Anggota Direksi, Dewan Komisaris, dan Dewan Pengawas BUMN bukan merupakan penyelenggara negara\""
           ]
+        },
+        citation: {
+          author: "Christy et al.",
+          refId: "christy-ref"
         }
       }
     ]

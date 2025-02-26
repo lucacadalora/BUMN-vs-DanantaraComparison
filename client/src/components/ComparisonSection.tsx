@@ -1,25 +1,13 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import CategoryComparison from './CategoryComparison';
+import CategoryComparison, { CategoryData } from './CategoryComparison';
 import SectionComment from './SectionComment';
-
-interface Category {
-  title: string;
-  old: {
-    title: string;
-    points: string[];
-  };
-  new: {
-    title: string;
-    points: string[];
-  };
-}
 
 interface ComparisonSectionProps {
   id: string;
   title: string;
   icon: React.ComponentType;
-  categories: Category[];
+  categories: CategoryData[];
 }
 
 const ComparisonSection: React.FC<ComparisonSectionProps> = ({ 
@@ -82,6 +70,7 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
               old={category.old}
               new={category.new}
               isLastItem={index === categories.length - 1}
+              citation={category.citation}
             />
           ))}
         </div>

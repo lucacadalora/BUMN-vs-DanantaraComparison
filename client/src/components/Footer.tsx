@@ -26,6 +26,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm text-blue-100">
               <li>• Kementerian BUMN Republik Indonesia</li>
               <li>• Database Peraturan JDIH</li>
+              <li id="christy-ref">• Christy et al. (2025). <i>A Legal Analysis for the New SOE Law Danantara: Legitimate Concern or Unfounded Paranoia?</i> Remedia Consults. <a href="https://remediaconsults.com/2025/02/24/a-legal-analysis-for-the-new-soe-law-danantara-legitimate-concern-or-unfounded-paranoia/" className="text-blue-200 hover:text-white underline" target="_blank" rel="noopener noreferrer">Link <ExternalLink className="inline w-3 h-3" /></a></li>
             </ul>
           </div>
         </div>
