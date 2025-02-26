@@ -1,0 +1,650 @@
+import React from 'react';
+
+const UUBUMNComparison = () => {
+  // Define color palette - more professional and muted colors
+  const colors = {
+    primary: "#003366",    // Dark blue
+    secondary: "#00529B",  // Medium blue
+    accent1: "#4A7BA7",    // Light blue
+    accent2: "#6B8E23",    // Olive green
+    accent3: "#557153",    // Forest green
+    neutral1: "#F8F8F8",   // Off white
+    neutral2: "#E5E5E5",   // Light gray
+    neutral3: "#B8B8B8",   // Medium gray
+    text1: "#2C3E50",      // Dark blue-gray
+    text2: "#34495E",      // Medium blue-gray
+  };
+
+  const sectionStyle = "mb-10";
+  const sectionHeaderStyle = "text-xl font-bold mb-4 text-center py-2 bg-gray-100 rounded";
+  const comparisonCardStyle = "bg-white rounded shadow-md overflow-hidden mb-6";
+  const cardHeaderStyle = "py-3 px-4 font-semibold text-white";
+  const cardBodyStyle = "p-4";
+
+  // Comparison data
+  const paradigmaPerbandingan = [
+    {
+      id: 1,
+      title: "1. Perubahan Mendasar pada Paradigma Hukum",
+      categories: [
+        {
+          title: "Dari Teori Sumber ke Teori Korporasi",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Menganut Teori Sumber dimana BUMN dipandang sebagai ekstensi negara",
+              "Pasal 1 ayat (1) mendefinisikan BUMN sebagai \"badan usaha yang seluruh atau sebagian besar modalnya dimiliki oleh negara melalui penyertaan secara langsung yang berasal dari kekayaan negara yang dipisahkan\"",
+              "Tidak ada pemisahan tegas antara kekayaan negara dan aset BUMN"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Secara eksplisit mengadopsi Teori Korporasi",
+              "Pasal 1 ayat (1) meredefinisi BUMN sebagai \"badan usaha yang memenuhi minimal salah satu ketentuan berikut: (a) seluruh atau sebagian besar modalnya dimiliki oleh Negara Republik Indonesia melalui penyertaan langsung; atau (b) terdapat hak istimewa yang dimiliki Negara Republik Indonesia\"",
+              "Pasal 4 ayat (2) menegaskan bahwa \"Modal BUMN merupakan bagian dari keuangan BUMN yang pengelolaannya dilakukan sesuai dengan prinsip tata kelola perusahaan yang baik\"",
+              "Pasal 4B secara eksplisit menyatakan bahwa \"Keuntungan atau kerugian yang dialami BUMN merupakan keuntungan atau kerugian BUMN\""
+            ]
+          }
+        },
+        {
+          title: "Perubahan Paradigma Pengawasan dan Pertanggungjawaban",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Paradigma ex-post (mengevaluasi setelah kejadian terjadi)",
+              "Tidak ada ketentuan eksplisit mengenai business judgment rule",
+              "Anggota Direksi, Dewan Komisaris/Pengawas BUMN termasuk kategori penyelenggara negara (bedasarkan UU No. 28/1999 dan UU No. 30/2002)"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Paradigma ex-ante (memprediksi dampak dari keputusan sebelum diambil)",
+              "Pasal 9F ayat (1) dan (2) mengatur secara eksplisit tentang business judgment rule, menyatakan bahwa anggota Direksi/Dewan Komisaris/Dewan Pengawas tidak dapat dimintai pertanggungjawaban hukum atas kerugian jika dapat membuktikan:",
+              "a. Kerugian tersebut bukan karena kesalahan atau kelalaiannya",
+              "b. Telah melakukan pengurusan dengan iktikad baik dan kehati-hatian untuk kepentingan BUMN",
+              "c. Tidak mempunyai benturan kepentingan",
+              "d. Telah mengambil tindakan untuk mencegah timbul atau berlanjutnya kerugian",
+              "Pasal 9G secara eksplisit menyatakan \"Anggota Direksi, Dewan Komisaris, dan Dewan Pengawas BUMN bukan merupakan penyelenggara negara\""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      id: 2,
+      title: "2. Restrukturisasi Kelembagaan dan Tata Kelola",
+      categories: [
+        {
+          title: "Pembentukan Badan Pengelola Investasi Daya Anagata Nusantara (Danantara)",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Tidak mengatur adanya lembaga khusus pengelola investasi dan aset BUMN"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 1 ayat (23) memperkenalkan \"Badan Pengelola Investasi Daya Anagata Nusantara yang selanjutnya disebut Badan\"",
+              "Pasal 3E ayat (1) dan (2) menetapkan Badan sebagai badan hukum Indonesia yang sepenuhnya dimiliki oleh Pemerintah Indonesia",
+              "Pasal 3E ayat (3) mengatur tujuan Badan yaitu \"meningkatkan dan mengoptimalkan investasi dan operasional BUMN dan sumber dana lain\"",
+              "Pasal 3F mengatur tugas dan wewenang Badan, termasuk mengelola dividen, menyetujui penyertaan modal, membentuk Holding, dan mengagunkan aset",
+              "Pasal 3G ayat (3) menetapkan modal Badan minimal Rp 1.000 triliun",
+              "Pasal 3M-3AA mengatur secara rinci struktur organisasi, organ, dan tata kelola Badan"
+            ]
+          }
+        },
+        {
+          title: "Pembentukan Struktur Holding",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Tidak mengatur secara spesifik tentang Holding BUMN"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 1 ayat (24) mendefinisikan \"Holding Investasi\" sebagai BUMN yang mempunyai tugas untuk melakukan pengelolaan dividen dan/atau pemberdayaan Aset BUMN",
+              "Pasal 1 ayat (25) mendefinisikan \"Holding Operasional\" sebagai BUMN yang mempunyai tugas untuk melakukan pengawasan terhadap kegiatan operasional BUMN",
+              "Pasal 3AB-3AG mengatur pembentukan, tugas, dan wewenang Holding Investasi",
+              "Pasal 3AK-3AN mengatur pembentukan, tugas, dan wewenang Holding Operasional",
+              "Pasal 3AC mengatur wewenang Holding Investasi termasuk pengelolaan dividen, pemberdayaan aset, penerbitan surat utang, dan pemberian pinjaman",
+              "Pasal 3AL mengatur wewenang Holding Operasional termasuk pengelolaan operasional BUMN"
+            ]
+          }
+        },
+        {
+          title: "Pembentukan Anak Usaha BUMN",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Tidak mengatur secara khusus tentang Anak Usaha BUMN"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 1 ayat (2) mendefinisikan \"Anak Usaha BUMN\" sebagai \"anak perusahaan BUMN dan turunannya yang didirikan oleh BUMN dalam rangka memenuhi kepentingan usaha BUMN\"",
+              "Pasal 62M-62O mengatur pembentukan Anak Usaha BUMN, termasuk persyaratan dan prosedurnya",
+              "Pasal 62M ayat (2) memungkinkan BUMN memiliki saham dengan hak istimewa pada Anak Usaha BUMN"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      id: 3,
+      title: "3. Reformasi Pengelolaan Keuangan dan Aset",
+      categories: [
+        {
+          title: "Redefinisi Status Modal dan Aset",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Pasal 4 ayat (1) hanya menyebutkan modal BUMN berasal dari kekayaan negara yang dipisahkan",
+              "Tidak ada pemisahan tegas antara modal negara dan kekayaan BUMN"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 4 ayat (1) menyatakan \"Modal BUMN berasal dari APBN dan non-APBN\"",
+              "Pasal 4 ayat (5) menegaskan \"Modal negara pada BUMN yang berasal dari penyertaan modal baik dalam rangka pendirian BUMN maupun perubahan, merupakan kekayaan BUMN yang menjadi milik dan tanggung jawab BUMN\"",
+              "Pasal 62A ayat (3) menyatakan \"Aset BUMN dapat dipindahtangankan, dijaminkan, dan/atau dikerjasamakan dengan pihak ketiga\""
+            ]
+          }
+        },
+        {
+          title: "Hapus Buku dan Hapus Tagih",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Tidak mengatur secara khusus tentang hapus buku dan hapus tagih"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 62D-62E mengatur wewenang BUMN untuk melakukan hapus buku dan/atau hapus tagih",
+              "Pasal 62D ayat (3) mengatur bahwa piutang yang dapat dihapusbukukan adalah \"piutang macet yang telah dilakukan upaya penagihan piutang secara optimal, namun tidak tertagih dan tidak disebabkan oleh adanya kesalahan\"",
+              "Pasal 62E mengatur bahwa BUMN dapat melakukan hapus tagih piutang yang telah dihapus buku dengan persetujuan Menteri untuk Perum dan Badan untuk Persero"
+            ]
+          }
+        },
+        {
+          title: "Pendanaan dan Investasi",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Terbatas pada penyertaan modal negara dan pendanaan konvensional"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 3H ayat (1) memungkinkan Badan melakukan investasi, baik secara langsung maupun tidak langsung",
+              "Pasal 3AC huruf d dan e memungkinkan Holding Investasi menerbitkan surat utang, menerima pinjaman, memberikan pinjaman, dan/atau penjaminan",
+              "Pasal 3AL huruf b dan c memungkinkan Holding Operasional menerbitkan surat utang, menerima pinjaman, memberikan pinjaman, dan/atau penjaminan"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: "4. Transformasi Sistem Pengawasan dan Audit",
+      categories: [
+        {
+          title: "Perubahan Peran BPK dan Auditor Eksternal",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Pasal 71 ayat (1) menyatakan pemeriksaan laporan keuangan perusahaan dilakukan oleh auditor eksternal yang ditetapkan oleh RUPS untuk Persero dan oleh Menteri untuk Perum",
+              "Pasal 71 ayat (2) menyatakan BPK berwenang melakukan pemeriksaan terhadap BUMN sesuai dengan ketentuan peraturan perundang-undangan"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 71 ayat (1) tetap menyatakan pemeriksaan laporan keuangan oleh akuntan publik",
+              "Pasal 71 ayat (2) membatasi kewenangan BPK hanya untuk \"pemeriksaan dengan tujuan tertentu\"",
+              "Pasal 71 ayat (3) menegaskan pemeriksaan dengan tujuan tertentu hanya dapat dilakukan \"atas permintaan alat kelengkapan DPR RI yang membidangi BUMN\"",
+              "Pasal 71A menetapkan bahwa \"Pemeriksaan pengelolaan dan tanggung jawab keuangan BUMN dilakukan oleh akuntan publik yang terdaftar pada Badan Pemeriksa Keuangan dan Otoritas Jasa Keuangan\""
+            ]
+          }
+        },
+        {
+          title: "Penguatan Pengawasan Internal",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Pasal 67-70 mengatur tentang satuan pengawasan intern dan komite audit tanpa detail spesifik"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 67A secara rinci mengatur tugas satuan pengawasan intern termasuk pemeriksaan operasional dan keuangan, penyampaian laporan, dan monitoring tindak lanjut",
+              "Pasal 70 ayat (1) mewajibkan Dewan Komisaris atau Dewan Pengawas membentuk komite audit",
+              "Pasal 70 ayat (3) memungkinkan pembentukan komite lain selain komite audit"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      id: 5,
+      title: "5. Penugasan Khusus dan Tanggung Jawab Sosial",
+      categories: [
+        {
+          title: "Penugasan Khusus dengan Pendanaan",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Tidak mengatur secara eksplisit tentang penugasan khusus dengan dukungan pendanaan"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 87C mengatur tentang penugasan khusus oleh Pemerintah Pusat kepada BUMN atau Anak Usaha BUMN",
+              "Pasal 87C ayat (3) menetapkan penugasan khusus ditetapkan oleh Presiden",
+              "Pasal 87C ayat (5) menyatakan \"Dalam hal penugasan khusus membutuhkan pendanaan dan/atau secara finansial tidak layak, Pemerintah Pusat memberikan pendanaan\"",
+              "Pasal 87D mengatur koordinasi antar-kementerian dalam penugasan khusus"
+            ]
+          }
+        },
+        {
+          title: "Tanggung Jawab Sosial dan Lingkungan",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Pasal 88 ayat (1) hanya mengatur BUMN dapat menyisihkan sebagian laba bersihnya untuk keperluan pembinaan usaha kecil/koperasi serta pembinaan masyarakat"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 87E ayat (1) secara tegas menyatakan \"BUMN, Anak Usaha BUMN, dan turunannya wajib melaksanakan tanggung jawab sosial dan lingkungan\"",
+              "Pasal 87E ayat (2) mengatur tanggung jawab sosial meliputi pembinaan UMKM dan koperasi serta pembinaan masyarakat di seluruh wilayah Indonesia",
+              "Pasal 87E ayat (3) menyebutkan sumber dana untuk tanggung jawab sosial termasuk penyisihan laba bersih, anggaran sebagai biaya perusahaan, dan sumber lain yang sah"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      id: 6,
+      title: "6. Hak Monopoli dan Penyelesaian Sengketa",
+      categories: [
+        {
+          title: "Hak Monopoli",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Tidak mengatur secara khusus tentang hak monopoli"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 86M ayat (1) memberikan kewenangan kepada Presiden untuk \"memberikan hak monopoli kepada BUMN atau Anak Usaha BUMN untuk memproduksi dan/atau memasarkan barang dan/atau jasa yang berkaitan dengan hajat hidup orang banyak serta cabang-cabang produksi yang penting bagi negara\""
+            ]
+          }
+        },
+        {
+          title: "Penyelesaian Sengketa",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Tidak mengatur mekanisme khusus penyelesaian sengketa antar-BUMN"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 87F ayat (1) mewajibkan penyelesaian sengketa antar-BUMN \"dengan cara musyawarah untuk mencapai mufakat\"",
+              "Pasal 87F ayat (2)-(4) mengatur mekanisme mediasi apabila musyawarah tidak mencapai mufakat",
+              "Pasal 87F ayat (4) menetapkan bahwa \"Kesepakatan penyelesaian sengketa, beda pendapat, atau perselisihan adalah final dan mengikat para pihak untuk dilaksanakan dengan iktikad baik\""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      id: 7,
+      title: "7. Restrukturisasi, Privatisasi, dan Pembubaran",
+      categories: [
+        {
+          title: "Reformasi Restrukturisasi",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Pasal 72 ayat (1) menetapkan maksud Restrukturisasi adalah untuk meningkatkan kinerja dan nilai perusahaan"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 72 ayat (1) memperluas maksud Restrukturisasi meliputi peningkatan kinerja, penambahan nilai, penyehatan, atau penyelamatan",
+              "Pasal 72 ayat (2)-(7) mengatur kriteria untuk penyehatan, penyelamatan, atau pembubaran BUMN",
+              "Pasal 73A-73B mengatur pembentukan komite penyelamatan BUMN yang dipimpin oleh Menteri"
+            ]
+          }
+        },
+        {
+          title: "Privatisasi",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Pasal 74-86 mengatur tentang privatisasi dengan fokus pada tujuan penambahan nilai dan peningkatan daya saing"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 78A menetapkan bahwa \"Presiden dapat melakukan Privatisasi setelah alat kelengkapan DPR RI yang membidangi BUMN memberikan persetujuan\"",
+              "Pasal 78B-86A mengatur prosedur dan tata kelola privatisasi secara lebih rinci"
+            ]
+          }
+        },
+        {
+          title: "Pembubaran",
+          old: {
+            title: "UU Lama (UU No. 19/2003)",
+            points: [
+              "Tidak mengatur secara khusus tentang pembubaran BUMN"
+            ]
+          },
+          new: {
+            title: "UU Baru (UU No. 1/2025)",
+            points: [
+              "Pasal 86B-86L mengatur pembubaran Persero dan Perum secara komprehensif, termasuk alasan pembubaran, prosedur, dan likuidasi",
+              "Pasal 86D ayat (2) menetapkan bahwa \"Pelaksanaan likuidasi diselesaikan dalam jangka waktu paling lama 2 (dua) tahun sejak tanggal pembentukan tim likuidasi\""
+            ]
+          }
+        }
+      ]
+    }
+  ];
+
+  const dampakBUMN = [
+    {
+      title: "8. Dampak Terhadap BUMN Existing dengan Adanya Danantara",
+      categories: [
+        {
+          title: "Implikasi Struktural",
+          points: [
+            {
+              subtitle: "Restrukturisasi Kepemilikan",
+              details: [
+                "Perubahan struktur kepemilikan BUMN sebagaimana diatur dalam Pasal 3AB ayat (4)-(6) dan Pasal 3AM",
+                "BUMN akan berada di bawah struktur holding (Investasi atau Operasional) dengan Badan (Danantara) menjadi pemegang saham mayoritas (99%)",
+                "Negara tetap memiliki 1% saham seri A Dwiwarna dengan hak istimewa (Pasal 3AB ayat (5) dan Pasal 3AM ayat (2))"
+              ]
+            },
+            {
+              subtitle: "Perubahan Hierarki Pengambilan Keputusan",
+              details: [
+                "Keputusan strategis akan melalui mekanisme yang melibatkan Badan, Holding Investasi/Operasional, dan BUMN",
+                "Pasal 3AC dan 3AL mengatur kewenangan Holding Investasi dan Holding Operasional yang akan mempengaruhi pengambilan keputusan BUMN"
+              ]
+            },
+            {
+              subtitle: "Potensi Konsolidasi dan Restrukturisasi",
+              details: [
+                "Pasal 621-62L mengatur tentang Penggabungan, Peleburan, Pengambilalihan, dan Pemisahan BUMN",
+                "Kemungkinan terjadinya konsolidasi BUMN dalam sektor yang sama untuk mencapai efisiensi dan skala ekonomi"
+              ]
+            }
+          ]
+        },
+        {
+          title: "Implikasi Operasional dan Manajerial",
+          points: [
+            {
+              subtitle: "Otonomi Operasional",
+              details: [
+                "Pasal 9F (business judgment rule) memungkinkan Direksi untuk lebih leluasa mengambil keputusan bisnis",
+                "Pasal 9G (status non-penyelenggara negara) mengurangi risiko kriminalisasi keputusan bisnis"
+              ]
+            },
+            {
+              subtitle: "Perubahan Budaya Risiko",
+              details: [
+                "Pergeseran dari paradigma ex-post ke ex-ante mendorong pengambilan keputusan yang lebih berorientasi pada nilai (value creation)",
+                "Adanya perlindungan business judgment rule mendorong berani mengambil risiko yang terukur"
+              ]
+            },
+            {
+              subtitle: "Profesionalisme dan Kompetensi",
+              details: [
+                "Pasal 15A, 27A, 43C, dan 56A mengatur persyaratan lebih ketat untuk Direksi dan Dewan Komisaris/Pengawas",
+                "Pasal 15C, 27C, 43E, dan 56C mewajibkan kontrak manajemen dan pakta integritas"
+              ]
+            }
+          ]
+        },
+        {
+          title: "Implikasi Keuangan dan Investasi",
+          points: [
+            {
+              subtitle: "Fleksibilitas Pendanaan",
+              details: [
+                "Pasal 3AC huruf d-e dan Pasal 3AL huruf b-c memungkinkan akses ke pendanaan yang lebih fleksibil melalui Holding",
+                "Pasal 62A ayat (3) memungkinkan BUMN untuk mengoptimalkan aset melalui kerja sama dengan pihak ketiga"
+              ]
+            },
+            {
+              subtitle: "Pengelolaan Aset Bermasalah",
+              details: [
+                "Pasal 62D-62H mengatur hapus buku dan hapus tagih untuk piutang dan aset bermasalah",
+                "Pasal 62B memungkinkan dibentuknya BUMN pengelola aset untuk menangani aset bermasalah"
+              ]
+            },
+            {
+              subtitle: "Alokasi Sumber Daya",
+              details: [
+                "Pasal 3F ayat (2) huruf a dan b memberi Badan kewenangan mengelola dividen dan menyetujui penambahan/pengurangan penyertaan modal",
+                "Pasal 3AC huruf b memberi Holding Investasi kewenangan melakukan pengelolaan dividen BUMN"
+              ]
+            }
+          ]
+        },
+        {
+          title: "Implikasi Jangka Panjang",
+          points: [
+            {
+              subtitle: "Nilai dan Daya Saing",
+              details: [
+                "Tujuan utama pembentukan Badan dan struktur holding adalah meningkatkan nilai dan daya saing BUMN",
+                "Pasal 3E ayat (3) menyatakan tujuan Badan untuk \"meningkatkan dan mengoptimalkan investasi dan operasional BUMN\""
+              ]
+            },
+            {
+              subtitle: "Globalisasi dan Ekspansi",
+              details: [
+                "Struktur baru memungkinkan BUMN untuk lebih agresif dalam ekspansi global",
+                "Pasal 2 ayat (1) huruf g mengatur tujuan BUMN termasuk \"membangun industri strategis yang berbasis riset, inovasi, dan teknologi yang bersinergi dengan negara lain\""
+              ]
+            },
+            {
+              subtitle: "Inovasi dan Pengembangan Teknologi",
+              details: [
+                "Pasal 87C ayat (1) mendukung penugasan khusus untuk \"penelitian dan pengembangan, serta inovasi nasional\"",
+                "Pasal 2 ayat (1) huruf g menekankan pengembangan industri strategis berbasis riset, inovasi, dan teknologi"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  const tantanganImplementasi = [
+    {
+      title: "9. Tantangan Implementasi dan Potensi Isu Hukum",
+      categories: [
+        {
+          title: "Tantangan Harmonisasi Regulasi",
+          points: [
+            {
+              subtitle: "Potensi Konflik Norma",
+              details: [
+                "UU No. 1/2025 dengan UU No. 17/2003 tentang Keuangan Negara terkait definisi kekayaan negara",
+                "UU No. 1/2025 dengan UU No. 31/1999 jo. UU No. 20/2001 tentang Pemberantasan Tindak Pidana Korupsi terkait definisi kerugian negara"
+              ]
+            },
+            {
+              subtitle: "Kebutuhan Peraturan Pelaksana",
+              details: [
+                "Pasal 94B menyatakan \"Peraturan pelaksanaan dari Undang-Undang ini harus ditetapkan paling lama 6 (enam) bulan terhitung sejak Undang-Undang ini diundangkan\"",
+                "Setidaknya 20+ Peraturan Pemerintah dan Peraturan Menteri perlu dibuat untuk mengimplementasikan UU ini secara penuh"
+              ]
+            }
+          ]
+        },
+        {
+          title: "Tantangan Tata Kelola dan Akuntabilitas",
+          points: [
+            {
+              subtitle: "Keseimbangan Komersial vs. Kepentingan Publik",
+              details: [
+                "Tantangan menyeimbangkan tujuan komersial dengan peran BUMN dalam ekonomi nasional dan kesejahteraan masyarakat",
+                "Pasal 2 ayat (1) menetapkan beragam tujuan BUMN yang perlu diseimbangkan"
+              ]
+            },
+            {
+              subtitle: "Potensi Konflik Kepentingan",
+              details: [
+                "Pasal 3Y menetapkan bahwa Menteri, organ, dan pegawai Badan tidak dapat dimintai pertanggungjawaban hukum dengan syarat-syarat tertentu",
+                "Tantangan untuk memastikan independensi pengambilan keputusan dalam struktur yang kompleks"
+              ]
+            }
+          ]
+        },
+        {
+          title: "Tantangan Transisi dan Implementasi",
+          points: [
+            {
+              subtitle: "Jangka Waktu Adaptasi",
+              details: [
+                "Pasal 94 menetapkan BUMN wajib menyesuaikan dengan ketentuan UU ini paling lama 1 (satu) tahun",
+                "Tantangan adaptasi terhadap paradigma, struktur, dan tata kelola baru dalam waktu yang relatif singkat"
+              ]
+            },
+            {
+              subtitle: "Kapasitas SDM",
+              details: [
+                "Pasal 87 ayat (1) menekankan pentingnya \"sumber daya manusia yang profesional dan berdaya saing global\"",
+                "Tantangan untuk mengembangkan kompetensi SDM yang sesuai dengan struktur dan paradigma baru"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  const poinKrusial = [
+    {
+      title: "10. Poin Krusial dan Implikasi Strategis bagi BUMN",
+      points: [
+        {
+          number: "1",
+          title: "Perubahan Status Modal BUMN",
+          reference: "Pasal 4 ayat (2) dan (5), Pasal 4B",
+          description: [
+            "Modal BUMN bukan lagi bagian dari kekayaan negara tetapi milik BUMN sebagai badan hukum",
+            "Keuntungan/kerugian BUMN bukan merupakan keuntungan/kerugian negara",
+            "Implikasi: Mengurangi risiko tuntutan kerugian negara, meningkatkan fleksibilitas pengambilan keputusan keuangan"
+          ]
+        },
+        {
+          number: "2",
+          title: "Status Non-Penyelenggara Negara",
+          reference: "Pasal 9G",
+          description: [
+            "Anggota Direksi, Dewan Komisaris, dan Dewan Pengawas BUMN bukan penyelenggara negara",
+            "Implikasi: Mengurangi risiko kriminalisasi, mengurangi pertanggungjawaban publik, mendorong profesionalisme bisnis"
+          ]
+        },
+        {
+          number: "3",
+          title: "Business Judgment Rule",
+          reference: "Pasal 9F",
+          description: [
+            "Perlindungan hukum terhadap keputusan bisnis yang diambil dengan itikad baik",
+            "Implikasi: Meningkatkan keberanian dalam pengambilan keputusan bisnis, mendorong inovasi dan pengambilan risiko yang terukur"
+          ]
+        },
+        {
+          number: "4",
+          title: "Perubahan Sistem Audit",
+          reference: "Pasal 71 dan 71A",
+          description: [
+            "Pemeriksaan oleh BPK dibatasi hanya untuk \"pemeriksaan dengan tujuan tertentu\" atas permintaan DPR",
+            "Implikasi: Mengurangi intensitas pengawasan, meningkatkan efisiensi, potensi mengurangi akuntabilitas publik"
+          ]
+        },
+        {
+          number: "5",
+          title: "Pembentukan Danantara",
+          reference: "Pasal 3E-3AA",
+          description: [
+            "Pembentukan Badan Pengelola Investasi Daya Anagata Nusantara dengan modal minimal Rp 1.000 triliun",
+            "Implikasi: Perubahan tata kelola BUMN secara fundamental, centralisasi pengelolaan aset dan investasi BUMN"
+          ]
+        },
+        {
+          number: "6",
+          title: "Struktur Holding",
+          reference: "Pasal 3AB-3AN",
+          description: [
+            "Pembentukan Holding Investasi dan Holding Operasional",
+            "Implikasi: Restrukturisasi BUMN, efisiensi pengelolaan, potensi konsolidasi antar-BUMN sejenis"
+          ]
+        },
+        {
+          number: "7",
+          title: "Fleksibilitas Pengelolaan Aset",
+          reference: "Pasal 62A-62H",
+          description: [
+            "Aset BUMN dapat dipindahtangankan, dijaminkan, dikerjasamakan",
+            "BUMN dapat melakukan hapus buku dan hapus tagih",
+            "Implikasi: Optimalisasi aset BUMN, penyelesaian aset bermasalah, efisiensi pengelolaan aset"
+          ]
+        },
+        {
+          number: "8",
+          title: "Hak Monopoli",
+          reference: "Pasal 86M",
+          description: [
+            "Presiden dapat memberikan hak monopoli kepada BUMN atau Anak Usaha BUMN",
+            "Implikasi: Potensi keuntungan kompetitif bagi BUMN tertentu, potensi distorsi pasar"
+          ]
+        },
+        {
+          number: "9",
+          title: "Penugasan Khusus dengan Pendanaan",
+          reference: "Pasal 87C",
+          description: [
+            "Penugasan khusus dengan dukungan pendanaan dari pemerintah",
+            "Implikasi: Kejelasan pemisahan misi komersial dan misi layanan publik, pengurangan beban keuangan BUMN untuk penugasan khusus"
+          ]
+        },
+        {
+          number: "10",
+          title: "Penyelesaian Sengketa Khusus",
+          reference: "Pasal 87F",
+          description: [
+            "Mekanisme penyelesaian sengketa antar-BUMN melalui musyawarah dan mediasi",
+            "Implikasi: Efisiensi penyelesaian sengketa, menghindari proses pengadilan yang berlarut-larut"
+          ]
+        }
+      ]
+    }
+  ];
