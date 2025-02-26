@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import CategoryComparison from './CategoryComparison';
 import { useSectionToggle } from '@/hooks/useSectionToggle';
@@ -30,14 +30,8 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
   categories,
   isActive
 }) => {
-  const { isOpen, toggle } = useSectionToggle(isActive);
-
-  // Effect to open the section if it becomes active
-  useEffect(() => {
-    if (isActive && !isOpen) {
-      toggle();
-    }
-  }, [isActive, isOpen, toggle]);
+  // Initialize with false so sections are closed by default
+  const { isOpen, toggle } = useSectionToggle(false);
 
   return (
     <section id={id} className="bg-white rounded-lg shadow-md overflow-hidden">

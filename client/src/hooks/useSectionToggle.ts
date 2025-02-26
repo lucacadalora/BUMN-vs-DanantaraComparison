@@ -1,16 +1,19 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState } from 'react';
 
 export const useSectionToggle = (initialState: boolean = false) => {
-  const [isOpen, setIsOpen] = useState(initialState);
+  const [isOpen, setIsOpen] = useState<boolean>(initialState);
 
-  // Effect to set initial state
-  useEffect(() => {
-    setIsOpen(initialState);
-  }, [initialState]);
-
-  const toggle = useCallback(() => {
+  const toggle = () => {
     setIsOpen(prev => !prev);
-  }, []);
+  };
 
-  return { isOpen, toggle };
+  const close = () => {
+    setIsOpen(false);
+  };
+
+  const open = () => {
+    setIsOpen(true);
+  };
+
+  return { isOpen, toggle, close, open };
 };
