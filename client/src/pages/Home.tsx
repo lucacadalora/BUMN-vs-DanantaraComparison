@@ -9,11 +9,12 @@ const Home: React.FC = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <p className="text-center text-[#34495E] mt-2 max-w-3xl mx-auto text-lg">
-            Studi komprehensif yang menganalisis perubahan regulasi dan implikasi yuridis 
-            untuk memahami transformasi pengelolaan BUMN di Indonesia
+      <main className="flex-grow container mx-auto px-4 py-6">
+        <div className="mb-6 bg-gray-50 p-4 rounded-lg border border-gray-100 shadow-sm">
+          <p className="text-center text-[#34495E] max-w-3xl mx-auto">
+            <span className="font-semibold text-[#003366]">Disediakan oleh Daily Digest:</span> Analisis mendalam tentang 
+            perubahan regulasi BUMN dan implikasi yuridisnya terhadap tata kelola dan 
+            pengembangan Badan Usaha Milik Negara di Indonesia
           </p>
         </div>
 
