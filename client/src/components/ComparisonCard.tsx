@@ -30,6 +30,18 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, points, type }) 
     return /^[a-z]\.\s.+/i.test(point);
   };
 
+  // Find the impact section if present
+  const impactPoints: string[] = [];
+  const regularPoints: string[] = [];
+  
+  points.forEach(point => {
+    if (point.startsWith("Dampak:")) {
+      impactPoints.push(point);
+    } else {
+      regularPoints.push(point);
+    }
+  });
+
   return (
     <div className={`rounded-lg border ${cardStyle} shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md`}>
       <div className={`${headerStyle} py-3 px-4 flex items-center`}>
@@ -38,7 +50,7 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, points, type }) 
       </div>
       <div className="p-5">
         <ul className="space-y-3">
-          {points.map((point, index) => {
+          {regularPoints.map((point, index) => {
             // Check if this is a sub-point (starts with a., b., etc.)
             if (isSubPoint(point)) {
               // This is a nested item, it will be rendered as part of the parent
@@ -48,8 +60,8 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, points, type }) 
             // Check if the next items are subpoints
             const subPoints: string[] = [];
             let nextIndex = index + 1;
-            while (nextIndex < points.length && isSubPoint(points[nextIndex])) {
-              subPoints.push(points[nextIndex]);
+            while (nextIndex < regularPoints.length && isSubPoint(regularPoints[nextIndex])) {
+              subPoints.push(regularPoints[nextIndex]);
               nextIndex++;
             }
 
@@ -75,6 +87,29 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, points, type }) 
             );
           })}
         </ul>
+        
+        {impactPoints.length > 0 && type === 'new' && (
+          <div className="mt-6 border-t pt-4 border-green-200">
+            <div className="bg-green-100 border border-green-200 rounded-lg p-4">
+              <h6 className="text-green-800 font-semibold mb-2 flex items-center">
+                <span className="inline-block w-3 h-3 rounded-full bg-green-600 mr-2"></span>
+                Dampak
+              </h6>
+              <ul className="space-y-2 pl-4">
+                {impactPoints.map((point, index) => (
+                  <li key={index} className="text-green-800">
+                    {point.replace("Dampak:", "").split(";").map((impact, idx) => (
+                      <p key={idx} className="mb-1 leading-relaxed text-green-800">
+                        {idx > 0 && <span className="inline-block w-1 h-1 rounded-full bg-green-700 mr-2"></span>}
+                        {impact.trim()}
+                      </p>
+                    ))}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
