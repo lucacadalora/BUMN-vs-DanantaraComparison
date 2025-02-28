@@ -143,6 +143,34 @@ const PPComparison: React.FC = () => {
             Investasi Daya Anagata Nusantara (Danantara) yang mengimplementasikan perubahan dalam UU No. 1 Tahun 2025
           </p>
         </div>
+        
+        {/* Referensi Regulasi Section */}
+        <div className="mb-8 bg-blue-50 p-5 rounded-lg border border-blue-100 shadow-sm">
+          <h2 className="text-lg font-bold text-[#002E5B] mb-3 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" 
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" 
+              className="mr-2">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+            </svg>
+            Referensi Regulasi
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="rounded-lg bg-white border border-blue-100 p-4 shadow-sm">
+              <h3 className="font-semibold text-[#003366] mb-2">UU No. 1 Tahun 2025</h3>
+              <p className="text-sm text-gray-600">
+                Undang-Undang Nomor 1 Tahun 2025 tentang Perubahan atas Undang-Undang Nomor 19 Tahun 2003 
+                tentang Badan Usaha Milik Negara. UU ini menjadi dasar hukum untuk reformasi tata kelola BUMN.
+              </p>
+            </div>
+            <div className="rounded-lg bg-white border border-green-100 p-4 shadow-sm">
+              <h3 className="font-semibold text-[#1B5E20] mb-2">PP No. 10 Tahun 2025</h3>
+              <p className="text-sm text-gray-600">
+                Peraturan Pemerintah Nomor 10 Tahun 2025 tentang Organisasi dan Tata Kelola Badan Pengelola 
+                Investasi Daya Anagata Nusantara (Danantara). PP ini merupakan peraturan pelaksana dari UU No. 1/2025.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="space-y-8" id="pp-comparison-sections">
           {ppComparisonData.map((section) => (
