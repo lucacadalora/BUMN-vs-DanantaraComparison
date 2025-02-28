@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogTrigger } from '@/components/ui/dialog';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
+import { Link } from 'wouter';
 
 const Home: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -35,6 +36,16 @@ const Home: React.FC = () => {
             Analisis mendalam tentang perubahan regulasi BUMN dan implikasi yuridisnya 
             terhadap tata kelola dan pengembangan Badan Usaha Milik Negara di Indonesia
           </p>
+          <div className="flex justify-center mt-4">
+            <Button 
+              variant="outline" 
+              className="bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+              onClick={() => window.location.href = '/pp-comparison'}
+            >
+              Lihat Analisis PP No. 10 Tahun 2025 (Danantara) 
+              <span className="ml-1 text-xs bg-blue-200 text-blue-800 px-2 py-0.5 rounded-full">Baru</span>
+            </Button>
+          </div>
         </div>
 
         <div className="space-y-8" id="comparison-sections">
