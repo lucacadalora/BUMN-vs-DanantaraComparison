@@ -34,7 +34,8 @@ export const ppComparisonData: ComparisonSection[] = [
           title: "Implementasi dalam PP No. 10/2025",
           points: [
             "Bagian \"Menimbang\" menyebutkan bahwa PP ini dibentuk untuk melaksanakan ketentuan Pasal 3P dan Pasal 3AA ayat (1) UU No. 19 Tahun 2003 tentang BUMN sebagaimana telah diubah dengan UU No. 1 Tahun 2025",
-            "Pasal 2 ayat (1): \"Dalam melaksanakan pengelolaan BUMN, Presiden melimpahkan sebagian tugas dan kewenangannya kepada Badan yang dibentuk dengan Undang-Undang tentang BUMN.\""
+            "Pasal 2 ayat (1): \"Dalam melaksanakan pengelolaan BUMN, Presiden melimpahkan sebagian tugas dan kewenangannya kepada Badan yang dibentuk dengan Undang-Undang tentang BUMN.\"",
+            "Dampak: Menciptakan landasan hukum yang kuat untuk Danantara sebagai pengelola BUMN dengan pelimpahan wewenang langsung dari Presiden"
           ]
         }
       }
@@ -58,7 +59,8 @@ export const ppComparisonData: ComparisonSection[] = [
           points: [
             "Pasal 1 angka 3: Definisi Badan sebagai \"badan yang melaksanakan tugas pemerintah di bidang pengelolaan BUMN sebagaimana diatur dalam Undang-Undang tentang BUMN\"",
             "Pasal 2 ayat (2): \"Badan sebagaimana dimaksud pada ayat (1) merupakan badan hukum Indonesia yang sepenuhnya dimiliki oleh Pemerintah Indonesia.\"",
-            "Pasal 2 ayat (4): \"Badan sebagaimana dimaksud pada ayat (1) bertanggung jawab kepada Presiden.\""
+            "Pasal 2 ayat (4): \"Badan sebagaimana dimaksud pada ayat (1) bertanggung jawab kepada Presiden.\"",
+            "Dampak: Memberikan otonomi lebih besar kepada Danantara sebagai badan hukum yang terpisah, namun tetap menjaga akuntabilitas melalui pertanggungjawaban langsung kepada Presiden"
           ]
         }
       }
@@ -81,7 +83,8 @@ export const ppComparisonData: ComparisonSection[] = [
         new: {
           title: "Implementasi dalam PP No. 10/2025",
           points: [
-            "Pasal 2 ayat (3): \"Badan sebagaimana dimaksud pada ayat (2) bertujuan untuk meningkatkan dan mengoptimalkan investasi dan operasional BUMN dan sumber dana lain.\""
+            "Pasal 2 ayat (3): \"Badan sebagaimana dimaksud pada ayat (2) bertujuan untuk meningkatkan dan mengoptimalkan investasi dan operasional BUMN dan sumber dana lain.\"",
+            "Dampak: Mengalihkan fokus dari pengawasan pasca kejadian (ex-post) ke perencanaan investasi strategis jangka panjang dan mendorong pengoptimalan nilai investasi daripada sekedar mencari \"siapa yang salah\""
           ]
         }
       }
@@ -105,7 +108,8 @@ export const ppComparisonData: ComparisonSection[] = [
           points: [
             "Pasal 1 angka 6: Definisi Holding Investasi sebagai \"BUMN yang seluruh modalnya dimiliki oleh Negara Republik Indonesia dan Badan yang mempunyai tugas untuk melakukan pengelolaan dividen dan/atau pemberdayaan aset BUMN serta tugas lain yang ditetapkan oleh Menteri dan/atau Badan.\"",
             "Pasal 1 angka 7: Definisi Holding Operasional sebagai \"BUMN yang seluruh modalnya dimiliki oleh Negara Republik Indonesia dan Badan yang mempunyai tugas untuk melakukan pengawasan terhadap kegiatan operasional BUMN serta kegiatan usaha lain.\"",
-            "Pasal 4 ayat (2) huruf c: Badan berwenang \"bersama Menteri membentuk Holding Investasi dan Holding Operasional\""
+            "Pasal 4 ayat (2) huruf c: Badan berwenang \"bersama Menteri membentuk Holding Investasi dan Holding Operasional\"",
+            "Dampak: Memungkinkan pengelompokan BUMN berdasarkan fungsi dan karakteristiknya sehingga memudahkan pengelolaan dan pengawasan; Memisahkan fungsi investasi dan operasional untuk mengoptimalkan kinerja pada kedua aspek"
           ]
         }
       }
@@ -129,7 +133,8 @@ export const ppComparisonData: ComparisonSection[] = [
           points: [
             "Pasal 5: \"Organ Badan terdiri atas: a. Dewan Pengawas; dan b. Badan Pelaksana.\"",
             "Pasal 6-11: Mengatur tentang Dewan Pengawas",
-            "Pasal 12-21: Mengatur tentang Badan Pelaksana"
+            "Pasal 12-21: Mengatur tentang Badan Pelaksana",
+            "Dampak: Menciptakan keseimbangan antara pengawasan dan eksekusi; Memungkinkan pengelolaan BUMN yang lebih responsif dan fleksibel berdasarkan prinsip-prinsip korporasi"
           ]
         }
       }
@@ -153,7 +158,8 @@ export const ppComparisonData: ComparisonSection[] = [
           title: "Implementasi dalam PP No. 10/2025",
           points: [
             "Pasal 28 ayat (1): Mengatur bantuan hukum kepada ketua dan anggota Dewan Pengawas, kepala dan anggota Badan Pelaksana, pegawai Badan, serta mantan pejabat dan pegawai.",
-            "Pasal 28 ayat (3): Mengatur perlindungan ganti rugi jika kerugian bukan karena kesalahan/kelalaian, telah melakukan pengurusan dengan iktikad baik dan kehati-hatian, tidak memiliki benturan kepentingan, dan tidak memperoleh keuntungan pribadi secara tidak sah."
+            "Pasal 28 ayat (3): Mengatur perlindungan ganti rugi jika kerugian bukan karena kesalahan/kelalaian, telah melakukan pengurusan dengan iktikad baik dan kehati-hatian, tidak memiliki benturan kepentingan, dan tidak memperoleh keuntungan pribadi secara tidak sah.",
+            "Dampak: Mengurangi risiko kriminalisasi keputusan bisnis dan mendorong inovasi serta pengambilan risiko yang terukur; Meningkatkan keberanian pengurus dalam mengambil keputusan strategis untuk pengembangan BUMN"
           ]
         }
       }
@@ -180,7 +186,8 @@ export const ppComparisonData: ComparisonSection[] = [
             "Pasal 4 ayat (2) huruf a: Badan berwenang \"mengelola dividen Holding Investasi, dividen Holding Operasional, dan dividen BUMN\"",
             "Pasal 4 ayat (2) huruf b: Badan berwenang \"menyetujui penambahan dan/atau pengurangan penyertaan modal pada BUMN yang bersumber dari pengelolaan dividen\"",
             "Pasal 4 ayat (2) huruf d: Badan berwenang \"bersama Menteri menyetujui usulan hapus buku dan/atau hapus tagih atas aset BUMN yang diusulkan oleh Holding Investasi atau Holding Operasional\"",
-            "Pasal 4 ayat (2) huruf e: Badan berwenang \"memberikan pinjaman, menerima pinjaman, dan mengagunkan aset dengan persetujuan Presiden\""
+            "Pasal 4 ayat (2) huruf e: Badan berwenang \"memberikan pinjaman, menerima pinjaman, dan mengagunkan aset dengan persetujuan Presiden\"",
+            "Dampak: Memberikan fleksibilitas dalam pengelolaan aset dan keuangan BUMN sesuai prinsip bisnis; Memungkinkan restrukturisasi aset bermasalah sehingga tidak membebani kinerja BUMN secara keseluruhan"
           ]
         }
       }
@@ -205,7 +212,8 @@ export const ppComparisonData: ComparisonSection[] = [
           points: [
             "Pasal 9 ayat (3): Komite Dewan Pengawas terdiri dari \"a. komite audit; b. komite etik; dan c. komite remunerasi dan sumber daya manusia.\"",
             "Pasal 17: Badan Pelaksana membentuk komite yang terdiri dari \"a. komite investasi; b. komite manajemen risiko; dan c. komite operasional portofolio.\"",
-            "Pasal 25: \"Dalam melakukan pengelolaan Badan, Badan Pelaksana harus memastikan pelaksanaan penerapan tata kelola perusahaan yang baik di lingkungan Badan.\""
+            "Pasal 25: \"Dalam melakukan pengelolaan Badan, Badan Pelaksana harus memastikan pelaksanaan penerapan tata kelola perusahaan yang baik di lingkungan Badan.\"",
+            "Dampak: Meningkatkan akuntabilitas internal dan transparansi tanpa menghambat kinerja operasional; Menciptakan sistem pengawasan berlapis yang efektif namun tidak birokratis"
           ]
         }
       }
@@ -229,7 +237,8 @@ export const ppComparisonData: ComparisonSection[] = [
           points: [
             "Pasal 13 ayat (1): \"Badan Pelaksana sebagaimana dimaksud dalam Pasal 12 berasal dari unsur profesional.\"",
             "Pasal 22 ayat (1): \"Pegawai Badan merupakan pekerja yang pengangkatan, pemberhentian, kedudukan, hak dan kewajibannya ditetapkan berdasarkan perjanjian kerja bersama sesuai dengan ketentuan peraturan perundang-undangan di bidang ketenagakerjaan.\"",
-            "Pasal 32: \"Pada saat awal pembentukan Badan, sumber daya manusia pada Badan dapat berasal dari Aparatur Sipil Negara dan/atau pegawai BUMN.\""
+            "Pasal 32: \"Pada saat awal pembentukan Badan, sumber daya manusia pada Badan dapat berasal dari Aparatur Sipil Negara dan/atau pegawai BUMN.\"",
+            "Dampak: Meningkatkan kompetensi dan profesionalisme SDM dalam pengelolaan BUMN; Menciptakan sistem pengelolaan SDM yang lebih berorientasi pada kinerja dan pencapaian"
           ]
         }
       }
@@ -252,7 +261,8 @@ export const ppComparisonData: ComparisonSection[] = [
           title: "Implementasi dalam PP No. 10/2025",
           points: [
             "Pasal 30 ayat (1): \"Dalam melaksanakan tugas pengelolaan BUMN, Badan melakukan koordinasi dengan kementerian dan lembaga terkait.\"",
-            "Pasal 30 ayat (2): \"Dalam melaksanakan tugas pengelolaan BUMN, Badan dapat bekerja sama dengan organisasi atau lembaga dalam negeri dan luar negeri.\""
+            "Pasal 30 ayat (2): \"Dalam melaksanakan tugas pengelolaan BUMN, Badan dapat bekerja sama dengan organisasi atau lembaga dalam negeri dan luar negeri.\"",
+            "Dampak: Mengurangi konflik kepentingan antar-lembaga pemerintah melalui koordinasi yang lebih terstruktur; Membuka peluang kerja sama internasional yang lebih luas untuk pengembangan BUMN"
           ]
         }
       }
