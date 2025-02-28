@@ -285,7 +285,8 @@ export const ppComparisonData: ComparisonSection[] = [
           title: "Implementasi dalam PP No. 10/2025",
           points: [
             "Pasal 4 ayat (2) huruf f: Badan berwenang \"mengesahkan dan mengonsultasikan kepada alat kelengkapan DPR RI yang membidangi BUMN atas Rencana Kerja dan Anggaran Perusahaan Holding Investasi dan Holding Operasional.\"",
-            "Pasal 7 ayat (2) huruf c dan d: Dewan Pengawas berwenang \"menerima dan mengevaluasi laporan pertanggungjawaban dari Badan Pelaksana\" dan \"menyampaikan laporan pertanggungjawaban Dewan Pengawas dan Badan Pelaksana kepada Presiden\""
+            "Pasal 7 ayat (2) huruf c dan d: Dewan Pengawas berwenang \"menerima dan mengevaluasi laporan pertanggungjawaban dari Badan Pelaksana\" dan \"menyampaikan laporan pertanggungjawaban Dewan Pengawas dan Badan Pelaksana kepada Presiden\"",
+            "Dampak: Menjaga keseimbangan antara kebebasan operasional dan pengawasan demokratis; Memastikan akuntabilitas melalui mekanisme pelaporan berlapis kepada DPR dan Presiden"
           ]
         }
       }
@@ -307,7 +308,8 @@ export const ppComparisonData: ComparisonSection[] = [
         new: {
           title: "Implementasi dalam PP No. 10/2025",
           points: [
-            "Pasal 16 ayat (1): \"Kewenangan Badan Pelaksana mewakili Badan Pelaksana di dalam dan di luar pengadilan sebagaimana dimaksud dalam Pasal 15 ayat (2) huruf f dilaksanakan oleh Kepala Badan Pelaksana.\""
+            "Pasal 16 ayat (1): \"Kewenangan Badan Pelaksana mewakili Badan Pelaksana di dalam dan di luar pengadilan sebagaimana dimaksud dalam Pasal 15 ayat (2) huruf f dilaksanakan oleh Kepala Badan Pelaksana.\"",
+            "Dampak: Menyederhanakan proses penyelesaian sengketa melalui representasi tunggal yang jelas; Mendorong efisiensi penanganan konflik bisnis dengan mekanisme yang lebih cepat"
           ]
         }
       }
@@ -343,7 +345,8 @@ export const ppComparisonData: ComparisonSection[] = [
             "Fleksibilitas pengelolaan aset korporasi dengan tetap memperhatikan prinsip tata kelola yang baik",
             "Kombinasi audit internal, akuntan publik, dan audit BPK dengan tujuan tertentu saat diperlukan",
             "Sistem kepegawaian berbasis kinerja dan kompetensi",
-            "Optimalisasi nilai investasi jangka panjang"
+            "Optimalisasi nilai investasi jangka panjang",
+            "Dampak: Transformasi menyeluruh dalam paradigma pengelolaan BUMN dari model birokratis menjadi model korporasi yang lebih dinamis; Meningkatkan daya saing BUMN dalam ekonomi global melalui pengelolaan yang lebih profesional dan strategis"
           ]
         }
       }
